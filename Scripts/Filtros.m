@@ -11,11 +11,8 @@ s = size(I);
 C = Idouble* 2;
 
 %%Pruebas convolucion con filtros binomial
-Sua = [1 2 1; 2 4 2; 1 2 1]/9;
-%Bin4x4 = [1 3 3 1; 3 9 9 3; 3 9 9 3; 1 3 3 1]/8;
+Sua = [1 2 1; 2 4 2; 1 2 1]/16;
 Bin5x5 = [1 4 6 4 1; 4 16 24 16 4; 6 24 36 24 6; 4 16 24 16 4; 1 4 6 4 1]/256;
-%Bin6x6 = [1 5 10 10 5 1;5 25 50 50 25 5; 10 50 100 100 50 10; 10 50 100 100 50 10; 5 25 50 50 25 5; 1 5 10 10 5 1]/32; 
-
 p = imread('cameraman.tif');
 BconvBin = conv2(Bin5x5,C);
 sizeB = size(BconvBin);
